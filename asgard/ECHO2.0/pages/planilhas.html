@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planilhas - ECHO</title>
+
+<link rel="stylesheet" href="../css/planilhas.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+.container{
+    padding: 20px;
+}
+
+.page-title{
+    margin-bottom: 20px;
+}
+
+.spreadsheets-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.sheet-card{
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.sheet-card:hover{
+    transform: translateY(-5px);
+}
+
+.sheet-icon{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.sheet-card h3{
+    margin-bottom: 10px;
+}
+
+.sheet-card p{
+    color: #666;
+    font-size: 14px;
+}
+
+.elogios{
+    border-left: 6px solid #28a745;
+}
+
+.melhorias{
+    border-left: 6px solid #ffc107;
+}
+
+.desapontamentos{
+    border-left: 6px solid #dc3545;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../assets/Logo.png" alt="ECHO">
+    </div>
+    <h1>Planilhas de Feedback</h1>
+</header>
+
+<div class="container">
+
+    <h2 class="page-title">Categorias</h2>
+
+    <div class="spreadsheets-grid">
+
+        <div class="sheet-card elogios" onclick="abrirPlanilha('elogios')">
+            <div class="sheet-icon">
+                <i class="fas fa-face-smile"></i>
+            </div>
+            <h3>Elogios</h3>
+            <p>
+                Visualize todos os comentários positivos enviados pelos clientes.
+            </p>
+        </div>
+
+        <div class="sheet-card melhorias" onclick="abrirPlanilha('melhorias')">
+            <div class="sheet-icon">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Melhorias</h3>
+            <p>
+                Sugestões e ideias para aprimorar serviços, produtos e atendimento.
+            </p>
+        </div>
+
+        <div class="sheet-card desapontamentos" onclick="abrirPlanilha('desapontamentos')">
+            <div class="sheet-icon">
+                <i class="fas fa-face-frown"></i>
+            </div>
+            <h3>Desapontamentos</h3>
+            <p>
+                Reclamações e experiências negativas registradas pelos clientes.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <div onclick="window.location.href='feed.html'">
+        <i class="fas fa-home"></i>
+        <span>Início</span>
+    </div>
+
+    <div onclick="window.location.href='formulario.html'">
+        <i class="fas fa-file-alt"></i>
+        <span>Formulários</span>
+    </div>
+
+    <div class="active">
+        <i class="fas fa-table"></i>
+        <span>Planilhas</span>
+    </div>
+
+    <div>
+        <i class="fas fa-user"></i>
+        <span>Perfil</span>
+    </div>
+
+</footer>
+
+<script>
+function abrirPlanilha(tipo){
+
+    switch(tipo){
+        case "elogios":
+            window.location.href = "elogios.html";
+            break;
+
+        case "melhorias":
+            window.location.href = "melhorias.html";
+            break;
+
+        case "desapontamentos":
+            window.location.href = "desapontamentos.html";
+            break;
+    }
+}
+</script>
+
+</body>
+</html>

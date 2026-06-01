@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Enviar Feedback</title>
+<link rel="stylesheet" href="../css/feedback.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Novo Feedback</h1>
+
+    <select id="categoria">
+        <option value="elogios">Elogio</option>
+        <option value="melhorias">Melhoria</option>
+        <option value="desapontamentos">Desapontamento</option>
+    </select>
+
+    <textarea
+        id="comentario"
+        placeholder="Digite seu comentário..."
+    ></textarea>
+
+    <button onclick="enviarFeedback()">
+        Enviar
+    </button>
+
+</div>
+
+<script src="../js/feedback.js"></script>
+
+</body>
+</html>

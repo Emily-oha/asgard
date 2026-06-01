@@ -1,0 +1,36 @@
+body{
+    background:#f5f7fa;
+    font-family:Arial,sans-serif;
+}
+
+.container{
+    width:500px;
+    margin:50px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+select,
+textarea{
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+}
+
+textarea{
+    height:150px;
+    resize:none;
+}
+
+button{
+    margin-top:15px;
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#4f46e5;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}

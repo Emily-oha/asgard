@@ -1,0 +1,181 @@
+/* =========================
+   ESTILO GERAL
+========================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    background: #f5f7fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background: #ffffff;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+
+.logo img{
+    height: 50px;
+}
+
+header h1{
+    color: #2c3e50;
+    font-size: 24px;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.container{
+    flex: 1;
+    padding: 30px;
+}
+
+.page-title{
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.spreadsheets-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.sheet-card{
+    background: #fff;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.sheet-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0,0,0,.12);
+}
+
+.sheet-icon{
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.sheet-card h3{
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.sheet-card p{
+    color: #666;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* =========================
+   CORES DAS CATEGORIAS
+========================= */
+
+.elogios{
+    border-left: 8px solid #22c55e;
+}
+
+.elogios .sheet-icon{
+    color: #22c55e;
+}
+
+.melhorias{
+    border-left: 8px solid #f59e0b;
+}
+
+.melhorias .sheet-icon{
+    color: #f59e0b;
+}
+
+.desapontamentos{
+    border-left: 8px solid #ef4444;
+}
+
+.desapontamentos .sheet-icon{
+    color: #ef4444;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,.08);
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: #777;
+    cursor: pointer;
+    transition: .3s;
+}
+
+footer div:hover{
+    color: #4f46e5;
+}
+
+footer .active{
+    color: #4f46e5;
+    font-weight: 600;
+}
+
+footer i{
+    font-size: 20px;
+}
+
+footer span{
+    font-size: 12px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px){
+
+    header{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container{
+        padding: 20px;
+    }
+
+    .spreadsheets-grid{
+        grid-template-columns: 1fr;
+    }
+}
