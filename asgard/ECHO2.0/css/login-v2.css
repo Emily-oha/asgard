@@ -1,0 +1,256 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+background:#f5f5f5;
+}
+
+.container{
+display:flex;
+height:100vh;
+}
+
+/* ESQUERDA */
+
+.left-side{
+width:40%;
+background:#050505;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+}
+
+.logo-container{
+text-align:center;
+z-index:2;
+}
+
+.logo{
+width:130px;
+animation:pulse 2s infinite;
+}
+
+.logo-container h1{
+font-size:70px;
+color:#fff;
+letter-spacing:8px;
+margin-top:20px;
+}
+
+.logo-container p{
+margin-top:20px;
+font-size:30px;
+color:#fff;
+}
+
+.logo-container span{
+color:#7c3aed;
+}
+
+.wave{
+position:absolute;
+bottom:-100px;
+left:-10%;
+width:120%;
+height:250px;
+background:
+radial-gradient(circle at center,
+rgba(124,58,237,.4),
+transparent 70%);
+filter:blur(50px);
+}
+
+/* DIREITA */
+
+.right-side{
+width:60%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+}
+
+.login-card{
+width:100%;
+max-width:580px;
+background:#fff;
+padding:50px;
+border-radius:24px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.small-logo{
+display:block;
+margin:0 auto 20px;
+width:60px;
+}
+
+.login-card h2{
+font-size:42px;
+text-align:center;
+margin-bottom:10px;
+}
+
+.login-card h2 span{
+color:#7c3aed;
+}
+
+.subtitle{
+text-align:center;
+color:#777;
+margin-bottom:35px;
+}
+
+.input-box{
+height:60px;
+border:1px solid #ddd;
+border-radius:12px;
+display:flex;
+align-items:center;
+padding:0 20px;
+margin-bottom:20px;
+}
+
+.input-box i{
+color:#888;
+}
+
+.input-box input{
+flex:1;
+border:none;
+outline:none;
+padding-left:15px;
+font-size:16px;
+}
+
+.eye{
+cursor:pointer;
+}
+
+.options{
+display:flex;
+justify-content:space-between;
+margin-bottom:25px;
+font-size:14px;
+}
+
+.options a{
+text-decoration:none;
+color:#7c3aed;
+font-weight:600;
+}
+
+.btn-login{
+width:100%;
+height:60px;
+border:none;
+border-radius:12px;
+background:linear-gradient(90deg,#6d28d9,#9333ea);
+color:#fff;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn-login:hover{
+transform:translateY(-2px);
+}
+
+.divider{
+margin:30px 0;
+text-align:center;
+position:relative;
+}
+
+.divider::before{
+content:'';
+position:absolute;
+left:0;
+top:50%;
+width:45%;
+height:1px;
+background:#ddd;
+}
+
+.divider::after{
+content:'';
+position:absolute;
+right:0;
+top:50%;
+width:45%;
+height:1px;
+background:#ddd;
+}
+
+.btn-sso{
+width:100%;
+height:60px;
+background:#fff;
+border:2px solid #7c3aed;
+border-radius:12px;
+color:#7c3aed;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+}
+
+.bottom-text{
+margin-top:25px;
+text-align:center;
+color:#666;
+}
+
+.bottom-text a{
+color:#7c3aed;
+font-weight:600;
+text-decoration:none;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+.left-side{
+display:none;
+}
+
+.right-side{
+width:100%;
+}
+
+.login-card{
+padding:35px;
+}
+
+.login-card h2{
+font-size:32px;
+}
+
+}
+
+/* ANIMAÇÃO */
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.08);
+}
+
+100%{
+transform:scale(1);
+}
+
+}

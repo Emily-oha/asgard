@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ECHO Login</title>
+
+<link rel="stylesheet" href="../css/login-v2.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left-side">
+
+        <div class="logo-container">
+
+            <img src="../assets/Logo.png" class="logo">
+            <h1>ECHO</h1>
+
+            <p>
+                Sua <span>voz.</span> Nosso propósito.
+            </p>
+
+        </div>
+
+        <div class="wave"></div>
+
+    </div>
+
+    <div class="right-side">
+
+        <div class="login-card">
+
+            <img src="../assets/logo.png" class="small-logo">
+
+            <h2>
+                Bem-vindo(a)
+                <span>de volta!</span>
+            </h2>
+
+            <p class="subtitle">
+                Faça login para acessar o ECHO.
+            </p>
+
+            <form id="loginForm">
+
+                <div class="input-box">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <input
+                    type="text"
+                    placeholder="E-mail ou usuário">
+
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                    type="password"
+                    id="senha"
+                    placeholder="Senha">
+
+                    <i class="fa-regular fa-eye eye"
+                    id="togglePassword"></i>
+
+                </div>
+
+                <div class="options">
+
+                    <label>
+                        <input type="checkbox">
+                        Lembrar de mim
+                    </label>
+
+                    <a href="#">
+                        Esqueci minha senha
+                    </a>
+
+                </div>
+
+                <button class="btn-login">
+                    Entrar
+                </button>
+
+            </form>
+
+            <div class="divider">
+                <span>ou</span>
+            </div>
+
+            <button class="btn-sso">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                Entrar com SSO
+
+            </button>
+
+            <p class="bottom-text">
+
+                Ainda não tem uma conta?
+
+                <a href="#">
+                    Fale com o administrador.
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../js/login-v2.js"></script>
+
+</body>
+</html>

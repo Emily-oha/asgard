@@ -1,0 +1,252 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+}
+
+.container{
+    display:flex;
+    height:100vh;
+}
+
+/* PAINEL ESQUERDO */
+
+.left-panel{
+    width:40%;
+    background:#050505;
+    color:white;
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+.logo-container{
+    text-align:center;
+    z-index:2;
+}
+
+.logo{
+    width:180px;
+    animation:pulse 3s infinite;
+}
+
+.logo-container h2{
+    font-size:3rem;
+    letter-spacing:12px;
+    margin-top:10px;
+}
+
+.slogan{
+    margin-top:20px;
+    font-size:1.4rem;
+}
+
+.slogan span{
+    color:#7c3aed;
+}
+
+.description{
+    position:absolute;
+    bottom:70px;
+
+    font-size:1rem;
+    color:#d4d4d4;
+
+    text-align:center;
+    width:80%;
+}
+
+.wave{
+    position:absolute;
+    width:900px;
+    height:900px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+    circle,
+    rgba(124,58,237,.20),
+    transparent 70%
+    );
+
+    bottom:-600px;
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.04);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* PAINEL DIREITO */
+
+.right-panel{
+    width:60%;
+    background:#f8f8f8;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+    width:100%;
+    max-width:500px;
+    padding:40px;
+}
+
+.mini-logo{
+    width:70px;
+    margin-bottom:20px;
+}
+
+.login-box h1{
+    font-size:2.7rem;
+    margin-bottom:10px;
+}
+
+.login-box h1 span{
+    color:#7c3aed;
+}
+
+.login-box p{
+    color:#777;
+    margin-bottom:30px;
+}
+
+.input-group{
+    position:relative;
+    margin-bottom:20px;
+}
+
+.input-group input{
+
+    width:100%;
+    height:60px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    padding-left:50px;
+    padding-right:50px;
+
+    font-size:16px;
+}
+
+.input-group i:first-child{
+
+    position:absolute;
+    left:18px;
+    top:20px;
+
+    color:#888;
+}
+
+.eye{
+
+    position:absolute;
+    right:18px;
+    top:20px;
+
+    cursor:pointer;
+    color:#888;
+}
+
+.options{
+
+    display:flex;
+    justify-content:space-between;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+}
+
+.options a{
+    color:#7c3aed;
+    text-decoration:none;
+}
+
+button{
+
+    width:100%;
+    height:58px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#7c3aed;
+
+    color:white;
+
+    font-size:18px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+    background:#6d28d9;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .left-panel{
+        width:100%;
+        height:35vh;
+    }
+
+    .right-panel{
+        width:100%;
+        height:65vh;
+    }
+
+    .logo{
+        width:120px;
+    }
+
+    .logo-container h2{
+        font-size:2rem;
+    }
+
+    .login-box{
+        padding:25px;
+    }
+
+    .login-box h1{
+        font-size:2rem;
+    }
+
+}
