@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECHO – Painel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/Dashboard.css">
+</head>
+<body>
+
+  <!-- Botão mobile para abrir sidebar -->
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+
+  <!-- Overlay mobile -->
+  <div class="overlay" id="overlay"></div>
+
+  <div class="app">
+
+    <!-- ─── SIDEBAR ─── -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand">
+          <img src="data:image/jpeg;base64,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zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzjzjzzzzTTzzzzzzzzzzzzzzzzzzzzzyhSjRSiSgxzzzzzzzzzzzzzzzzzzzzzzywzyzxyywzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz/2gAMAwEAAgADAAAAEPPPCAAAAAACAABBAAAAADHLDDDLLPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPOPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPAPPPPPPPPPPPPPPBfPGHPPPPPPPPPPPPKPPPPPPPPPPPPCNFfPIaAPPPPPPPPPPPKPPPPPPPPPPJFCFFeNAbAIHPPPPPPPPPIPPPPPPPPPPHFaFHaHCeAKFPPPPPPPPPAPPPPPPPPPPOAaFPfHAaAIVPPPPPPPPPCPPPPPPPPPPLPPHPfPBaEbPPPPPPPPPPIPPPPPPPPPPPPPPPfPHfHPPPPPPPPPPPKPPPPPPPPPPPPPPHPPLPPPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPOPPNNPOPONPPPPPPPPPPKPPPPPPPPPPPKMOFHEEKIHPPPPPPPPPPKPPPPPPPPPPPPLHDHLDPLPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPP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" alt="ECHO" class="brand-logo" />
+          <div class="brand-text">
+            <span class="brand-name">ECHO</span>
+            <span class="brand-tag">Sua voz. Nosso propósito.</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <span class="nav-label">Principal</span>
+        <a href="#" class="nav-item active" data-section="home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+          Início
+        </a>
+
+        <span class="nav-label">Funcionalidades</span>
+        <a href="#" class="nav-item" data-section="feedback">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Feedback da área
+        </a>
+        <a href="#" class="nav-item" data-section="atendimento">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11a9 9 0 0 1 18 0v6a2 2 0 0 1-2 2h-1v-7h3"/><path d="M3 17v-6h3v7H4a1 1 0 0 1-1-1z"/></svg>
+          Atendimento
+        </a>
+        <a href="#" class="nav-item" data-section="produtos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8l9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>
+          Produtos
+        </a>
+        <a href="#" class="nav-item" data-section="processos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h6v6H4z"/><path d="M14 14h6v6h-6z"/><path d="M10 7h6a2 2 0 0 1 2 2v3"/><path d="M14 17H8a2 2 0 0 1-2-2v-3"/></svg>
+          Processos
+        </a>
+
+        <span class="nav-label">Conta</span>
+        <a href="#" class="nav-item" data-section="config">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          Configurações
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="user-card">
+          <div class="user-avatar">JS</div>
+          <div class="user-info">
+            <span class="user-name">João Silva</span>
+            <span class="user-role">Colaborador</span>
+          </div>
+          <button class="logout-btn" aria-label="Sair">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ─── CONTEÚDO PRINCIPAL ─── -->
+    <main class="content">
+
+      <header class="content-header">
+        <div>
+          <h1 id="page-title">Olá, João 👋</h1>
+          <p id="page-subtitle">O que você precisa fazer hoje?</p>
+        </div>
+      </header>
+
+      <!-- HOME -->
+      <section class="page active" id="page-home">
+        <div class="cards-grid">
+
+          <button class="action-card" data-section="feedback">
+            <div class="action-icon icon-feedback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3>Área de feefbacks</h3>
+            <p>Compartilhe sugestões, elogios ou pontos de melhoria sobre seu setor.</p>
+            <span class="action-go">Abrir →</span>
+          </button>
+
+          <button class="action-card" data-section="atendimento">
+            <div class="action-icon icon-atendimento">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11a9 9 0 0 1 18 0v6a2 2 0 0 1-2 2h-1v-7h3"/><path d="M3 17v-6h3v7H4a1 1 0 0 1-1-1z"/></svg>
+            </div>
+            <h3>Atendimento</h3>
+            <p>Abra um chamado ou compartilhe sua opinião a respeito do atendimento.</p>
+            <span class="action-go">Abrir →</span>
+          </button>
+
+          <button class="action-card" data-section="produtos">
+            <div class="action-icon icon-produtos">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8l9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>
+            </div>
+            <h3>Produtos</h3>
+            <p>Compartilhe sua opinião a respeito dos produtos.</p>
+            <span class="action-go">Abrir →</span>
+          </button>
+
+          <button class="action-card" data-section="processos">
+            <div class="action-icon icon-processos">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h6v6H4z"/><path d="M14 14h6v6h-6z"/><path d="M10 7h6a2 2 0 0 1 2 2v3"/><path d="M14 17H8a2 2 0 0 1-2-2v-3"/></svg>
+            </div>
+            <h3>Processos</h3>
+            <p>Compartilhe sua opinião sobre o processo de recebimento do seu produto ou informação.</p>
+            <span class="action-go">Abrir →</span>
+          </button>
+
+        </div>
+      </section>
+
+      <!-- FEEDBACK -->
+      <section class="page" id="page-feedback">
+        <div class="panel">
+          <h2>Feedback da área</h2>
+          <p class="panel-desc">Sua opinião ajuda a melhorar o dia a dia do seu setor. Preencha abaixo:</p>
+
+          <form class="form" onsubmit="return false;">
+            <label class="form-label">Setor</label>
+            <select class="form-input">
+              <option>Selecione seu setor</option>
+              <option>Recursos Humanos</option>
+              <option>Financeiro</option>
+              <option>Operações</option>
+              <option>Tecnologia</option>
+              <option>Comercial</option>
+            </select>
+
+            <label class="form-label">Tipo de feedback</label>
+            <div class="chip-group">
+              <button type="button" class="chip active">Sugestão</button>
+              <button type="button" class="chip">Elogio</button>
+              <button type="button" class="chip">Problema</button>
+            </div>
+
+            <label class="form-label">Mensagem</label>
+            <textarea class="form-input" rows="5" placeholder="Descreva seu feedback..."></textarea>
+
+            <button class="btn-primary" type="submit">Enviar feedback</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ATENDIMENTO -->
+      <section class="page" id="page-atendimento">
+        <div class="panel">
+          <h2>Atendimento</h2>
+          <p class="panel-desc">Abra um novo chamado ou acompanhe os existentes.</p>
+
+          <div class="ticket-list">
+            <div class="ticket-item">
+              <div class="ticket-status status-open"></div>
+              <div class="ticket-info">
+                <span class="ticket-title">Acesso ao sistema financeiro</span>
+                <span class="ticket-meta">Aberto em 10/06/2026 · #1042</span>
+              </div>
+              <span class="ticket-tag tag-open">Em andamento</span>
+            </div>
+            <div class="ticket-item">
+              <div class="ticket-status status-done"></div>
+              <div class="ticket-info">
+                <span class="ticket-title">Troca de equipamento</span>
+                <span class="ticket-meta">Aberto em 02/06/2026 · #1031</span>
+              </div>
+              <span class="ticket-tag tag-done">Concluído</span>
+            </div>
+          </div>
+
+          <button class="btn-primary" style="margin-top:24px;">Abrir novo chamado</button>
+        </div>
+      </section>
+
+      <!-- PRODUTOS -->
+      <section class="page" id="page-produtos">
+        <div class="panel">
+          <h2>Produtos</h2>
+          <p class="panel-desc">Catálogo e status dos produtos disponíveis.</p>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>Produto</th><th>Categoria</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Plataforma Echo Voice</td><td>Software</td><td><span class="tag-done">Ativo</span></td></tr>
+                <tr><td>App Mobile Echo</td><td>Software</td><td><span class="tag-done">Ativo</span></td></tr>
+                <tr><td>Integração SSO</td><td>Infraestrutura</td><td><span class="tag-open">Em testes</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESSOS -->
+      <section class="page" id="page-processos">
+        <div class="panel">
+          <h2>Processos</h2>
+          <p class="panel-desc">Fluxos e etapas dos processos internos.</p>
+
+          <div class="process-list">
+            <div class="process-item">
+              <div class="process-num">1</div>
+              <div>
+                <span class="ticket-title">Onboarding de colaboradores</span>
+                <p class="panel-desc" style="margin:4px 0 0;">Etapas de integração para novos funcionários.</p>
+              </div>
+            </div>
+            <div class="process-item">
+              <div class="process-num">2</div>
+              <div>
+                <span class="ticket-title">Solicitação de compras</span>
+                <p class="panel-desc" style="margin:4px 0 0;">Fluxo de aprovação para pedidos de compra.</p>
+              </div>
+            </div>
+            <div class="process-item">
+              <div class="process-num">3</div>
+              <div>
+                <span class="ticket-title">Avaliação de desempenho</span>
+                <p class="panel-desc" style="margin:4px 0 0;">Ciclo de feedback e avaliação periódica.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONFIGURAÇÕES -->
+      <section class="page" id="page-config">
+        <div class="panel">
+          <h2>Configurações</h2>
+          <p class="panel-desc">Gerencie suas preferências de conta.</p>
+
+          <label class="form-label">Nome</label>
+          <input class="form-input" type="text" value="João Silva" />
+
+          <label class="form-label">E-mail</label>
+          <input class="form-input" type="email" value="joao.silva@empresa.com" />
+
+          <button class="btn-primary">Salvar alterações</button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="Dashboard.js"></script>
+</body>
+</html>
