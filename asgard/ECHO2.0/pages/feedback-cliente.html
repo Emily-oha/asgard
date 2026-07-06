@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECHO – Enviar Feedback</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/feedback-cliente.css" />
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <img src="data:image/jpeg;base64,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zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzjzjzzzzTTzzzzzzzzzzzzzzzzzzzzzyhSjRSiSgxzzzzzzzzzzzzzzzzzzzzzzywzyzxyywzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz/2gAMAwEAAgADAAAAEPPPCAAAAAACAABBAAAAADHLDDDLLPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPOPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPAPPPPPPPPPPPPPPBfPGHPPPPPPPPPPPPKPPPPPPPPPPPPCNFfPIaAPPPPPPPPPPPKPPPPPPPPPPJFCFFeNAbAIHPPPPPPPPPIPPPPPPPPPPHFaFHaHCeAKFPPPPPPPPPAPPPPPPPPPPOAaFPfHAaAIVPPPPPPPPPCPPPPPPPPPPLPPHPfPBaEbPPPPPPPPPPIPPPPPPPPPPPPPPPfPHfHPPPPPPPPPPPKPPPPPPPPPPPPPPHPPLPPPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPOPPNNPOPONPPPPPPPPPPKPPPPPPPPPPPKMOFHEEKIHPPPPPPPPPPKPPPPPPPPPPPPLHDHLDPLPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPP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" alt="ECHO" class="brand-img" />
+      <span class="brand-name">ECHO</span>
+    </div>
+
+    <nav class="nav">
+      <a href="#" class="nav-item active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Feedbacks
+      </a>
+      <a href="#" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Meus Feedbacks
+      </a>
+      <a href="#" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"/></svg>
+        Comunicados
+      </a>
+      <a href="#" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Perfil
+      </a>
+      <a href="#" class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Ajuda
+      </a>
+    </nav>
+
+    <!-- Card inferior -->
+    <div class="sidebar-promo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#6B21F5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <p class="promo-title">Sua opinião faz a diferença!</p>
+      <p class="promo-desc">Ajude-nos a melhorar sua experiência e construir um ambiente cada vez melhor para todos.</p>
+    </div>
+
+    <a href="#" class="nav-item nav-sair">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      Sair
+    </a>
+  </aside>
+
+  <!-- CONTEÚDO -->
+  <main class="content">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div></div>
+      <div class="topbar-right">
+        <button class="notif-btn" aria-label="Notificações">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"/></svg>
+          <span class="notif-dot"></span>
+        </button>
+        <div class="user-pill">
+          <div class="user-avatar">ES</div>
+          <span class="user-name">Emily Soares</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+    </header>
+
+    <!-- FORM -->
+    <div class="form-wrap">
+
+      <!-- Título -->
+      <div class="page-header">
+        <div class="page-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#6B21F5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div>
+          <h1>Enviar Feedback</h1>
+          <p>Sua opinião é muito importante para nós. Compartilhe suas experiências, sugestões ou pontos de melhoria.</p>
+        </div>
+      </div>
+
+      <form id="feedbackForm" onsubmit="return false;">
+
+        <!-- STEP 1: Identificação -->
+        <div class="form-section">
+          <h2 class="step-title">1. Como você gostaria de se identificar?</h2>
+          <p class="step-desc">Você pode escolher se deseja enviar este feedback de forma anônima ou identificada.</p>
+
+          <div class="identity-grid">
+            <label class="identity-card active" id="cardAnonimo">
+              <input type="radio" name="identity" value="anonimo" checked />
+              <div class="identity-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><line x1="18" y1="8" x2="23" y2="13"/><line x1="23" y1="8" x2="18" y2="13"/></svg>
+              </div>
+              <div>
+                <strong>Anônimo</strong>
+                <p>Seu nome não será revelado para ninguém.</p>
+              </div>
+            </label>
+
+            <label class="identity-card" id="cardIdentificado">
+              <input type="radio" name="identity" value="identificado" />
+              <div class="identity-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div>
+                <strong>Identificado</strong>
+                <p>Seu nome será identificado junto ao feedback.</p>
+              </div>
+            </label>
+          </div>
+
+          <div class="info-banner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6B21F5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Todos os feedbacks são tratados com respeito e utilizados apenas para melhorias.
+          </div>
+        </div>
+
+        <!-- STEP 2: Avaliação por estrelas -->
+        <div class="form-section">
+          <h2 class="step-title">2. Como você avalia sua experiência geral?</h2>
+          <p class="step-desc">Dê uma nota de 1 a 5 estrelas.</p>
+
+          <div class="star-rating">
+            <div class="stars-row">
+              <button type="button" class="star" data-val="1" aria-label="1 estrela">★</button>
+              <button type="button" class="star" data-val="2" aria-label="2 estrelas">★</button>
+              <button type="button" class="star" data-val="3" aria-label="3 estrelas">★</button>
+              <button type="button" class="star" data-val="4" aria-label="4 estrelas">★</button>
+              <button type="button" class="star" data-val="5" aria-label="5 estrelas">★</button>
+            </div>
+            <div class="star-label" id="starLabel"></div>
+          </div>
+        </div>
+
+        <!-- STEP 3: Categoria -->
+        <div class="form-section">
+          <h2 class="step-title">3. Sobre o que é o seu feedback?</h2>
+          <p class="step-desc">Selecione a categoria que melhor se encaixa no seu feedback.</p>
+
+          <div class="select-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6B21F5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <select id="categoria" class="form-select">
+              <option value="">Selecione uma categoria</option>
+              <option>Atendimento</option>
+              <option>Produto</option>
+              <option>Processo interno</option>
+              <option>Comunicação</option>
+              <option>Liderança</option>
+              <option>Ambiente de trabalho</option>
+              <option>Outro</option>
+            </select>
+            <svg class="select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </div>
+
+        <!-- STEP 4: Detalhes -->
+        <div class="form-section">
+          <h2 class="step-title">4. Conte-nos mais detalhes</h2>
+          <p class="step-desc">Descreva sua experiência, sugestão ou ponto de melhoria.</p>
+
+          <div class="textarea-wrap">
+            <textarea id="detalhes" class="form-textarea" placeholder="Escreva aqui seu feedback..." maxlength="1000"></textarea>
+            <span class="char-count" id="charCount">0/1000 caracteres</span>
+          </div>
+        </div>
+
+        <!-- STEP 5: Contato (condicional) -->
+        <div class="form-section contact-section" id="contactSection" style="display:none;">
+          <div class="contact-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <div>
+              <p><strong>Como você se identificou, podemos entrar em contato</strong> <span class="optional">(opcional)</span></p>
+              <p class="step-desc" style="margin:0;">Deixe seu e-mail ou telefone para que possamos retornar.</p>
+            </div>
+          </div>
+          <div class="input-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6B21F5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <input type="text" id="contato" class="form-input-contact" placeholder="Seu e-mail ou telefone (opcional)" />
+          </div>
+        </div>
+
+        <!-- AÇÕES -->
+        <div class="form-actions">
+          <button type="button" class="btn-limpar" id="btnLimpar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+            Limpar
+          </button>
+          <button type="submit" class="btn-enviar" id="btnEnviar">
+            Enviar Feedback
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      Seus dados estão protegidos. Leia nossa <a href="#" class="footer-link">Política de Privacidade.</a>
+    </footer>
+
+  </main>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="../js/feedback-cliente.js"></script>
+</body>
+</html>
